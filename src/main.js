@@ -1,5 +1,16 @@
+//import vue
 import Vue from 'vue'
 import App from './App.vue'
+
+
+//import vuetify
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+Vue.use(Vuetify)
+
+//import vue icon
+import {BootstrapVueIcons} from  'bootstrap-vue'
+Vue.use (BootstrapVueIcons)
 
 // import vue-router
 import VueRouter from 'vue-router'
@@ -17,12 +28,16 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 
+//import components
 import home from './components/home.vue'
 import about from './components/about.vue'
+import video from './components/video.vue'
 
 const routes = [
+  { path: '/', component: home },
   { path: '/home', component: home },
-  { path: '/about', component: about }
+  { path: '/about', component: about },
+  { path: '/video', component: video }
 ]
 
 
